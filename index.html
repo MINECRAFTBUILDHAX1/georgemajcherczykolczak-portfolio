@@ -4,10 +4,10 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<title>George Majcherczyk-Olczak | Music Composer for Film & Media</title>
+<title>George Majcherczyk-Olczak | Music Composer</title>
 
-<meta name="description" content="George Majcherczyk-Olczak is a film and media composer creating cinematic, narrative-driven orchestral music for visual storytelling projects." />
-<meta name="keywords" content="film composer, music composer, orchestral music, cinematic soundtrack, George Majcherczyk-Olczak" />
+<meta name="description" content="Film and media composer creating cinematic orchestral music for visual storytelling." />
+
 <link rel="icon" href="data:image/svg+xml,
 <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'>
 <text y='.9em' font-size='90'>♪</text>
@@ -22,9 +22,31 @@
 }
 
 body {
-  background: #0B0B0D;
   color: #fff;
-  line-height: 1.6;
+  background: #0b0f14;
+  overflow-x: hidden;
+}
+
+/* 🎨 WATERCOLOUR BACKGROUND LAYERS */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background:
+    radial-gradient(circle at 20% 20%, rgba(120, 200, 180, 0.25), transparent 40%),
+    radial-gradient(circle at 80% 30%, rgba(120, 160, 255, 0.18), transparent 45%),
+    radial-gradient(circle at 50% 80%, rgba(180, 220, 200, 0.12), transparent 50%);
+  z-index: -2;
+}
+
+/* PAPER TEXTURE FEEL */
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image: url("https://www.transparenttextures.com/patterns/paper-fibers.png");
+  opacity: 0.05;
+  z-index: -1;
 }
 
 /* NAV */
@@ -37,133 +59,163 @@ nav {
 
 .logo {
   font-family: Garamond, serif;
-  font-size: 15px;
   letter-spacing: 1px;
 }
 
 /* ICONS */
 .nav-icons {
   display: flex;
-  gap: 18px;
+  gap: 16px;
   align-items: center;
 }
 
 .icon {
   width: 18px;
   height: 18px;
-  fill: rgba(255,255,255,0.75);
-  transition: 0.2s;
+  fill: rgba(255,255,255,0.8);
+  transition: 0.3s;
 }
 
 .icon:hover {
-  fill: #fff;
+  fill: #7fd1c7;
+  transform: translateY(-2px);
 }
 
 /* HERO */
 .hero {
   min-height: 100vh;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
   align-items: center;
-  text-align: center;
-  padding: 40px 20px;
+  justify-content: center;
+  padding: 60px 20px;
 }
 
+/* SIDE LAYOUT */
+.hero-inner {
+  display: flex;
+  gap: 60px;
+  align-items: center;
+  max-width: 1100px;
+  width: 100%;
+}
+
+/* IMAGE — NOT CIRCULAR */
 .hero img {
-  width: 120px;
-  height: 120px;
-  border-radius: 100%;
-  object-fit: cover;
-  margin-bottom: 20px;
-  border: 1px solid rgba(255,255,255,0.15);
+  width: 320px;
+  max-width: 40vw;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 30px 80px rgba(0,0,0,0.5);
+  border: 1px solid rgba(255,255,255,0.08);
 }
 
-.hero h1 {
+/* TEXT */
+.hero-text h1 {
   font-family: Garamond, serif;
   font-size: 42px;
-  letter-spacing: 2px;
+  margin-bottom: 10px;
 }
 
-.hero p {
-  margin-top: 10px;
-  color: rgba(255,255,255,0.6);
-  max-width: 600px;
-}
-
-.hero-buttons {
-  margin-top: 28px;
+.hero-text p {
+  color: rgba(255,255,255,0.7);
+  max-width: 500px;
+  margin-bottom: 15px;
 }
 
 .btn {
   display: inline-block;
-  margin: 0 10px;
+  margin-top: 15px;
   padding: 10px 18px;
   border: 1px solid rgba(255,255,255,0.25);
   color: #fff;
   text-decoration: none;
-  transition: 0.2s;
+  transition: 0.3s;
 }
 
 .btn:hover {
-  border-color: #fff;
+  border-color: #7fd1c7;
+  color: #7fd1c7;
 }
 
 /* SECTIONS */
 section {
-  padding: 80px 20px;
-  max-width: 900px;
+  max-width: 1000px;
   margin: auto;
-  text-align: center;
+  padding: 90px 20px;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: 1s ease;
+}
+
+section.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ABOUT (ABOVE WORKS) */
+.about-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
 }
 
 h2 {
   font-family: Garamond, serif;
-  margin-bottom: 30px;
-  letter-spacing: 1px;
+  margin-bottom: 20px;
+  color: #7fd1c7;
 }
 
 /* WORK */
 .grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 1fr 1fr;
   gap: 20px;
-  text-align: left;
 }
 
 .card {
   padding: 18px;
   border: 1px solid rgba(255,255,255,0.08);
+  transition: 0.3s;
+  background: rgba(255,255,255,0.02);
 }
 
-/* ABOUT */
-.about p {
-  max-width: 650px;
-  margin: auto;
-  color: rgba(255,255,255,0.7);
+.card:hover {
+  border-color: rgba(127, 209, 199, 0.4);
+  transform: translateY(-5px);
 }
 
 /* CONTACT */
-.contact a {
-  display: block;
-  margin-top: 10px;
-  color: rgba(255,255,255,0.75);
-  text-decoration: none;
+.contact {
+  text-align: center;
 }
 
 /* FOOTER */
 footer {
   text-align: center;
-  padding: 40px 20px;
+  padding: 40px;
   color: rgba(255,255,255,0.4);
   font-size: 13px;
 }
 
 /* MOBILE */
-@media (max-width: 768px) {
-  .hero h1 { font-size: 28px; }
-  .grid { grid-template-columns: 1fr; }
-  nav { padding: 20px; }
+@media (max-width: 900px) {
+  .hero-inner {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero img {
+    width: 80%;
+  }
 }
 </style>
 </head>
@@ -176,24 +228,24 @@ footer {
 
   <div class="nav-icons">
 
-    <!-- IMDb -->
-    <a href="https://www.imdb.com/name/nm17548613/" target="_blank">
+    <!-- IMDb film reel -->
+    <a href="https://www.imdb.com/name/nm17548613/">
       <svg class="icon" viewBox="0 0 24 24">
-        <path d="M4 4h3v16H4V4zm5 0h3l3 6 3-6h3v16h-3V9l-3 6-3-6v11H9V4z"/>
+        <path d="M7 4h10v2H7V4zm0 14h10v2H7v-2zM6 6h12v12H6V6zm3 3v6h2V9H9zm4 0v6h2V9h-2z"/>
       </svg>
     </a>
 
     <!-- LinkedIn -->
-    <a href="https://www.linkedin.com" target="_blank">
+    <a href="#">
       <svg class="icon" viewBox="0 0 24 24">
         <path d="M4 4h4v16H4V4zm2 2a2 2 0 110-4 2 2 0 010 4zm6 4h4v2h.1c.6-1 2-2 4-2 3 0 5 2 5 6v6h-4v-6c0-2-1-3-3-3s-3 1-3 3v6h-4V10z"/>
       </svg>
     </a>
 
     <!-- Email -->
-    <a href="mailto:gmajcherczykolczak@gmail.com">
+    <a href="mailto:your@email.com">
       <svg class="icon" viewBox="0 0 24 24">
-        <path d="M2 6h20v12H2V6zm10 7L2 6h20L12 13z"/>
+        <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5L4 8V6l8 5 8-5v2z"/>
       </svg>
     </a>
 
@@ -202,20 +254,35 @@ footer {
 
 <!-- HERO -->
 <header class="hero">
-  <img src="georgeprofileimage.png" alt="George Majcherczyk-Olczak">
+  <div class="hero-inner">
 
-  <h1>GEORGE MAJCHERCZYK-OLCZAK</h1>
+    <img src="georgeprofileimage.png" alt="George">
 
-  <p>Music Composer for Film & Media</p>
+    <div class="hero-text">
+      <h1>GEORGE MAJCHERCZYK-OLCZAK</h1>
+      <p>Music Composer for Film & Media</p>
+      <p>Composing narrative-driven orchestral music for film and visual storytelling.</p>
+      <a class="btn" href="#work">View Work</a>
+    </div>
 
-  <p>
-    Composing narrative-driven music for film, orchestral and visual storytelling projects.
-  </p>
-
-  <div class="hero-buttons">
-    <a class="btn" href="#work">View Work</a>
   </div>
 </header>
+
+<!-- ABOUT (NOW ABOVE WORKS) -->
+<section class="about-section">
+  <div class="about-wrapper">
+
+    <div>
+      <h2>About</h2>
+      <p>
+        Emerging composer working across film, orchestral and media music.
+        Background in choral performance, orchestral playing, and ensemble leadership.
+        Focus on cinematic storytelling through sound.
+      </p>
+    </div>
+
+  </div>
+</section>
 
 <!-- WORK -->
 <section id="work">
@@ -224,30 +291,20 @@ footer {
   <div class="grid">
     <div class="card">
       <strong>#NOTHER (2027)</strong><br>
-      Live-action feature film score (upcoming)
+      Feature film score (upcoming)
     </div>
 
     <div class="card">
       <strong>Project Nova</strong><br>
-      Sci-fi animated feature exploring identity & soundscapes
+      Sci-fi narrative score concept
     </div>
   </div>
-</section>
-
-<!-- ABOUT -->
-<section>
-  <h2>About</h2>
-  <p>
-    Emerging music composer working across film, orchestral and media music.  
-    Background in choral performance, orchestral playing, and ensemble leadership.  
-    Focus on narrative-driven composition and cinematic sound design.
-  </p>
 </section>
 
 <!-- CONTACT -->
 <section class="contact">
   <h2>Contact</h2>
-  <a href="mailto:gmajcherczykolczak@gmail.com">gmajcherczykolczak@gmail.com</a>
+  <p>your@email.com</p>
 </section>
 
 <!-- FOOTER -->
@@ -257,6 +314,18 @@ footer {
 
 <script>
 document.getElementById("year").textContent = new Date().getFullYear();
+
+// scroll reveal
+const sections = document.querySelectorAll("section");
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("show");
+    }
+  });
+}, { threshold: 0.15 });
+
+sections.forEach(sec => observer.observe(sec));
 </script>
 
 </body>
