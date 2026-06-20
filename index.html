@@ -5,14 +5,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
 <title>George Majcherczyk-Olczak | Music Composer for Film & Media</title>
-<meta name="description" content="George Majcherczyk-Olczak is a music composer for film and media, creating narrative-driven orchestral and cinematic scores for visual storytelling projects." />
-<meta name="keywords" content="music composer, film composer, orchestral music, cinematic music, soundtrack, George Majcherczyk-Olczak" />
-<meta name="author" content="George Majcherczyk-Olczak" />
 
-<!-- Open Graph -->
-<meta property="og:title" content="George Majcherczyk-Olczak | Composer" />
-<meta property="og:description" content="Film & media composer creating narrative-driven cinematic music." />
-<meta property="og:type" content="website" />
+<meta name="description" content="George Majcherczyk-Olczak is a film and media composer creating cinematic, narrative-driven orchestral music for visual storytelling projects." />
+<meta name="keywords" content="film composer, music composer, orchestral music, cinematic soundtrack, George Majcherczyk-Olczak" />
+<link rel="icon" href="data:image/svg+xml,
+<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'>
+<text y='.9em' font-size='90'>♪</text>
+</svg>">
 
 <style>
 * {
@@ -33,44 +32,55 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 40px;
+  padding: 22px 40px;
 }
 
 .logo {
   font-family: Garamond, serif;
-  font-size: 16px;
+  font-size: 15px;
   letter-spacing: 1px;
 }
 
+/* ICONS */
 .nav-icons {
   display: flex;
   gap: 18px;
   align-items: center;
 }
 
-.nav-icons a {
-  color: white;
-  opacity: 0.8;
+.icon {
+  width: 18px;
+  height: 18px;
+  fill: rgba(255,255,255,0.75);
   transition: 0.2s;
 }
 
-.nav-icons a:hover {
-  opacity: 1;
+.icon:hover {
+  fill: #fff;
 }
 
 /* HERO */
 .hero {
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   text-align: center;
-  padding: 0 20px;
-  position: relative;
+  padding: 40px 20px;
+}
+
+.hero img {
+  width: 120px;
+  height: 120px;
+  border-radius: 100%;
+  object-fit: cover;
+  margin-bottom: 20px;
+  border: 1px solid rgba(255,255,255,0.15);
 }
 
 .hero h1 {
-  font-family: Cinzel, Garamond, serif;
+  font-family: Garamond, serif;
   font-size: 42px;
   letter-spacing: 2px;
 }
@@ -78,74 +88,75 @@ nav {
 .hero p {
   margin-top: 10px;
   color: rgba(255,255,255,0.6);
+  max-width: 600px;
 }
 
 .hero-buttons {
-  margin-top: 30px;
+  margin-top: 28px;
 }
 
 .btn {
   display: inline-block;
   margin: 0 10px;
   padding: 10px 18px;
-  border: 1px solid rgba(255,255,255,0.3);
+  border: 1px solid rgba(255,255,255,0.25);
+  color: #fff;
   text-decoration: none;
-  color: white;
   transition: 0.2s;
 }
 
 .btn:hover {
-  border-color: white;
+  border-color: #fff;
 }
 
 /* SECTIONS */
 section {
   padding: 80px 20px;
-  max-width: 1000px;
+  max-width: 900px;
   margin: auto;
+  text-align: center;
 }
 
 h2 {
   font-family: Garamond, serif;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   letter-spacing: 1px;
 }
 
-/* SHOWREEL */
-.audio-box {
-  text-align: center;
-  margin-top: 20px;
-}
-
-/* WORK GRID */
+/* WORK */
 .grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
+  text-align: left;
 }
 
 .card {
-  padding: 20px;
+  padding: 18px;
   border: 1px solid rgba(255,255,255,0.08);
 }
 
 /* ABOUT */
 .about p {
+  max-width: 650px;
+  margin: auto;
   color: rgba(255,255,255,0.7);
-  max-width: 700px;
 }
 
 /* CONTACT */
-.contact {
-  text-align: center;
-}
-
 .contact a {
-  color: white;
-  text-decoration: none;
   display: block;
   margin-top: 10px;
-  opacity: 0.8;
+  color: rgba(255,255,255,0.75);
+  text-decoration: none;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 40px 20px;
+  color: rgba(255,255,255,0.4);
+  font-size: 13px;
 }
 
 /* MOBILE */
@@ -164,46 +175,47 @@ h2 {
   <div class="logo">GEORGE MAJCHERCZYK-OLCZAK</div>
 
   <div class="nav-icons">
-    <a href="https://www.imdb.com/name/nm17548613/" target="_blank" aria-label="IMDb">
-      🎬
+
+    <!-- IMDb -->
+    <a href="https://www.imdb.com/name/nm17548613/" target="_blank">
+      <svg class="icon" viewBox="0 0 24 24">
+        <path d="M4 4h3v16H4V4zm5 0h3l3 6 3-6h3v16h-3V9l-3 6-3-6v11H9V4z"/>
+      </svg>
     </a>
-    <a href="https://www.linkedin.com" target="_blank" aria-label="LinkedIn">
-      💼
+
+    <!-- LinkedIn -->
+    <a href="https://www.linkedin.com" target="_blank">
+      <svg class="icon" viewBox="0 0 24 24">
+        <path d="M4 4h4v16H4V4zm2 2a2 2 0 110-4 2 2 0 010 4zm6 4h4v2h.1c.6-1 2-2 4-2 3 0 5 2 5 6v6h-4v-6c0-2-1-3-3-3s-3 1-3 3v6h-4V10z"/>
+      </svg>
     </a>
-    <a href="mailto:gmajcherczykolczak@gmail.com" aria-label="Email">
-      ✉
+
+    <!-- Email -->
+    <a href="mailto:gmajcherczykolczak@gmail.com">
+      <svg class="icon" viewBox="0 0 24 24">
+        <path d="M2 6h20v12H2V6zm10 7L2 6h20L12 13z"/>
+      </svg>
     </a>
+
   </div>
 </nav>
 
 <!-- HERO -->
 <header class="hero">
+  <img src="georgeprofilepic.png" alt="George Majcherczyk-Olczak">
+
   <h1>GEORGE MAJCHERCZYK-OLCZAK</h1>
+
   <p>Music Composer for Film & Media</p>
-  <p style="color:rgba(255,255,255,0.5); max-width:600px; margin: 15px auto;">
+
+  <p>
     Composing narrative-driven music for film, orchestral and visual storytelling projects.
   </p>
 
   <div class="hero-buttons">
-    <a class="btn" href="#showreel">▶ Listen to Showreel</a>
-    <a class="btn" href="#work">📂 View Work</a>
+    <a class="btn" href="#work">View Work</a>
   </div>
 </header>
-
-<!-- SHOWREEL -->
-<section id="showreel">
-  <h2>Showreel</h2>
-
-  <div class="audio-box">
-    <audio controls>
-      <source src="showreel.mp3" type="audio/mpeg">
-      Your browser does not support audio.
-    </audio>
-    <p style="color:rgba(255,255,255,0.5); margin-top:10px;">
-      Selected works from film and narrative projects.
-    </p>
-  </div>
-</section>
 
 <!-- WORK -->
 <section id="work">
@@ -219,21 +231,11 @@ h2 {
       <strong>Project Nova</strong><br>
       Sci-fi animated feature exploring identity & soundscapes
     </div>
-
-    <div class="card">
-      <strong>Emotional Cue</strong><br>
-      Orchestral cinematic piece
-    </div>
-
-    <div class="card">
-      <strong>Tension Cue</strong><br>
-      Dark cinematic scoring work
-    </div>
   </div>
 </section>
 
 <!-- ABOUT -->
-<section class="about">
+<section>
   <h2>About</h2>
   <p>
     Emerging music composer working across film, orchestral and media music.  
@@ -246,11 +248,16 @@ h2 {
 <section class="contact">
   <h2>Contact</h2>
   <a href="mailto:gmajcherczykolczak@gmail.com">gmajcherczykolczak@gmail.com</a>
-
-  <div style="margin-top:20px;">
-    🎬 IMDb | 💼 LinkedIn | ✉ Email
-  </div>
 </section>
+
+<!-- FOOTER -->
+<footer>
+  © <span id="year"></span> George Majcherczyk-Olczak. All rights reserved.
+</footer>
+
+<script>
+document.getElementById("year").textContent = new Date().getFullYear();
+</script>
 
 </body>
 </html>
